@@ -1,0 +1,123 @@
+ver 1.7.0	2016-12-30	calvin
+		* Ô´ÂëÎÄ¼þ½á¹¹µ÷Õû
+		* ÐÂÔö¶¨ÒåÀàÐÍAMOUNT£¬¶ÔÓ¦CÓïÑÔÀàÐÍdouble£¬¶ÔÓ¦Êý¾Ý¿â±íÀàÐÍNUMERIC£¨NUMERIC( (¶¨Òå³¤¶È-8)/2*4 , 2 )£©
+
+ver 1.6.5	2016-10-22	calvin
+		* µ÷ÕûÁËCHAR,INT 1ÀàÐÍµÄËùÓÐ´¦Àí
+
+ver 1.6.4	2016-06-13	calvin
+		* ÐÂÔöº¯ÊýDSCGetErrorLine_%sÓÃÓÚ×Ô¶¯Éú³É´úÂë±¨´íÊ±ÌáÊ¾´íÎó
+
+ver 1.6.3	2016-04-26	calvin
+		* Ëæfasterjson v1.1.6¸üÐÂ
+
+ver 1.6.2	2016-04-14	calvin
+		* LinuxÏÂµÄlong longÀàÐÍµÄÊä³ö¸ñÊ½»¯·ûÐÞÕýÎª%lld£¬¸ÐÐ»tanli
+
+ver 1.6.1	2015-12-13	calvin
+		ÐÞ¸´ÎÊÌâ
+		* ÔÊÐíÔÚÒ»¸ödscÎÄ¼þÖÐÅäÖÁ½¸öÒÔÉÏ½á¹¹ÁË
+
+ver 1.6.0	2015-12-13	calvin
+		ÐÂÔö¹¦ÄÜ
+		* IDLÎÄ¼þÀïÔÊÐíÓÃÊ×±ê¼Ç"H"¸½¼ÓÊä³öÐÅÏ¢µ½Í·ÎÄ¼þÖÐ
+		* IDLÎÄ¼þÀïÊ×±ê¼Ç"CREATE_SQL","DROP_SQL","SQLACTION"È¡ÏûÊýÁ¿ÏÞÖÆ£¬Ö®Ç°×î¶à10¸ö
+		ÐÞ¸´ÎÊÌâ
+		* µ±½âÎöIDL±¨´íÊ±£¬ÏÔÊ¾µÄÐÐºÅÓÐÎó£¬ÏÖÒÑÐÞ¸´
+
+ver 1.5.0	2015-11-29	calvin
+		* Éú³É´úÂëµÄÒ»Ð©Ð¡µ÷Õû
+		* ÐÂÔöµ¼³öJSONÎÄ±¾º¯Êý*_JSON_DUP_*
+		ÄÚ²¿ÉêÇëµ¼³ö»º³åÇø£¬ÐèÒªÓ¦ÓÃ×Ô¼ºÊÍ·Å
+			base = NULL ;
+			nret = DSCSERIALIZE_JSON_DUP_BankJsonTransaction( & st , NULL , & ptr , NULL , NULL ) ;
+		|| ÄÚ²¿ÉêÇëÊ±³õÊ¼»¯´óÐ¡
+			base = NULL ;
+			buf_size = 1024 ;
+			nret = DSCSERIALIZE_JSON_DUP_BankJsonTransaction( & st , NULL , & ptr , & buf_size , NULL ) ;
+		|| Ó¦ÓÃÔ¤ÉêÇëºÃ£¬µ«µ¼³öÊ±²»×ãÊ±£¬ÄÚ²¿µ÷Õû£»lenÊä³öÊµ¼ÊÌî³ä³¤¶È
+			base = malloc( 1024 ) ;
+			buf_size = 1024 ;
+			len = buf_size - 1 ;
+			nret = DSCSERIALIZE_JSON_DUP_BankJsonTransaction( & st , NULL , & ptr , & buf_size , & len ) ;
+		|| µ±len < buf_size - 1Ê±£¬»áÔ¤ÁôptrÇ°ÃæÒ»¿é¿Õ¼ä£»lenÊä³öÊµ¼ÊÌî³ä³¤¶È
+
+ver 1.4.5	2015-05-26	calvin
+		* ÓÖÐÞÕýÁË¶à²ãÑ­»·ÖÐµÄ´úÂëÉú³ÉÎÊÌâ
+
+ver 1.4.4	2015-05-22	calvin
+		* ÐÞÕýÁË¶à²ãÑ­»·ÖÐµÄ´úÂëÉú³ÉÎÊÌâ
+
+ver 1.4.3	2015-05-12	calvin
+		* »º³åÇø³¤¶È¼ÆËã¸ü×¼È·
+		* µ÷ÕûÁËmakefile*
+
+ver 1.4.2	2015-05-11	calvin
+		* ½â¾öÁËÐòÁÐ»¯XML,JSONÊ±µÄ»º³åÇøÒç³öÎÊÌâ
+		* ÐòÁÐ»¯XML,JSONÃ÷Ï¸Ê±°´ÕÕÒþ²Ø×Ö¶Î_*_count¼ÆËã´ÎÊý
+
+ver 1.4.1	2015-05-02	calvin
+		* ÅäºÏ¿ªÔ´¿âfasterjson v1.1.1¸ÄÔì
+
+ver 1.4.0	2015-05-01	calvin
+		* ÅäºÏ¿ªÔ´¿âfasterjson v1.1.0¸ÄÔì
+		* jsonÐòÁÐ»¯ÐÂÔöÄäÃûÊý×é±í´ïÖ§³Ö£¬Èç"name:[1,2,3,4,5,6]"£¬¶¨Òå×Ö¶ÎÃûÊ±Ç°¼Ó'_'
+		* ÐÂÔöjsonÑ¹²â³ÌÐòtest/press_deserialize_json
+		* ÐÂÔöUTF8µÄjson²âÊÔ³ÌÐòtest/test_serialize_json_utf8
+		* ¶¨Òå×Ö¶ÎÀàÐÍÐÂÔö²¼¶ûÀàÐÍBOOL£¬´úÂëÖÐÊ¹ÓÃDSCTRUE»òDSCFALSE¸³Öµ
+
+ver 1.3.3	2015-04-25	calvin
+		* Éú³ÉµÄXML»òJSON±¨ÎÄ»á¸ù¾ÝÄÚ²¿±äÁ¿"_*_count"Öµ¶ø¼õÉÙÊä³öÁ¿
+
+ver 1.3.2	2015-03-21	calvin
+		* ²¹È«º¯ÊýDSCDESERIALIZE_JSON_COMPACT_*
+
+ver 1.3.1	2015-03-16	calvin
+		* ÅäºÏ¿ªÔ´¿âfasterjson¸ÄÔìdsc×Ô¶¯Éú³É´úÂë
+
+ver 1.3.0	2015-03-14	calvin
+		* ÐÞÕýÁËSQLÌõ¼þÎª<>,<=,>=Ê±µÄec×Ô¶¯´úÂëÉú³ÉÎÊÌâ
+		* °ÑdscÃüÁîÐÐ²ÎÊý°üº¬pqsql¸Ä³Épgsql
+		* °ÑdscÃüÁîÐÐ²ÎÊý-sql²ð³É-sql-pgsql,-sql-oracle
+		* ÐÂÔöJSON½ôËõ·ç¸ñµÄÐòÁÐ»¯º¯Êý
+		* ÐÂÔöXML½ôËõ·ç¸ñµÄÐòÁÐ»¯º¯Êý
+
+ver 1.2.0	2015-02-12	calvin
+		* ½â¾ö²»ÄÜ±àÒëÎÊÌâ£¬È¥µôÁË×Ô¶¯Éú³ÉµÄ´úÂëÖÐÒýÓÃ·µ»ØÖµºêFASTERJSON_INFO_END_OF_BUFFER,FASTERXML_INFO_END_OF_BUFFER
+		* È¥µôÁËÉú³ÉµÄJSON±¨ÎÄÖÐ¶¥²ã½á¹¹ÌåÃû×÷Îª¸ù½Úµã¡£½÷É÷Éý¼¶£¡
+
+ver 1.1.3	2014-11-21	calvin
+		* ÐÂÔö¸ù¾Ý¹Ø¼ü×ÖSQLCONN×Ô¶¯Éú³ÉCONNECT,DISCONNECT,BEGINWORK,COMMIT,ROLLBACKº¯Êý
+		* ÐÂÔö×¢ÊÍÓï·¨
+
+ver 1.1.2	2014-10-10	calvin
+		* ESQLÐÂÔö×Ô¶¯Éú³ÉSQLACTION´úÂë
+		* ÐÞÕýÁËXML¡¢JSONÐòÁÐ»¯/·´ÐòÁÐ»¯º¯ÊýÖÐµÄÒ»¸öBUG
+		* Ö§³ÖORACLEÁË
+
+ver 1.1.1	2014-10-07	calvin
+		* ÐÂÔö×ÛºÏÊ¾Àý test_client,test_server
+		* ÐÂÔö×ÛºÏÊ¾Àý test_db2json
+
+ver 1.1.0	2014-09-20	calvin
+		* ÐÂÔö×Ô¶¯Éú³É´úÂë:XMLÐòÁÐ»¯/·´ÐòÁÐ»¯º¯Êý£¬ÒÀÀµ¿ªÔ´¿âfasterxml
+		* ÐÂÔö×Ô¶¯Éú³É´úÂë:JSONÐòÁÐ»¯/·´ÐòÁÐ»¯º¯Êý£¬ÒÀÀµ¿ªÔ´¿âfasterjson
+		* ÐÂÔö×Ô¶¯Éú³É´úÂë:ESQL´úÂë
+		* Ö§³ÖPGSQLÁË
+
+ver 1.0.4	2014-09-09	calvin
+		* ÐÞÕýÁËAIXÉÏµÄ±àÒëÎÊÌâ
+		* ÐÞÕýÁË¸¡µãÊýµÄ×Ö½ÚÐòÎÊÌâ
+		* ÓÅ»¯ÁË×Ô¶¯Éú³É´úÂëµÄ²¼¾Ö
+		* ×Ô¶¯Éú³É´úÂëÇ°µÄ¹¤¾ß°æ±¾ÐÅÏ¢
+
+ver 1.0.3	2014-09-05	calvin
+		* ÐÂÔö×Ô¶¯Éú³É´úÂë : ¾«¼ò/Ñ¹ËõÐòÁÐ»¯/·´ÐòÁÐ»¯º¯Êý
+
+ver 1.0.1	2014-09-01	calvin
+		* ÐÂÔöÀàÐÍ INT 8 ºÍ UINT (1,2,4,8) ºÍ UCHAR
+
+ver 1.0.0	2014-08-29	calvin
+		* ´´½¨
+		* ¶ÁÈë³éÏó¶¨ÒåÎÄ¼þ
+		* ÐÂÔö×Ô¶¯Éú³É´úÂë : ÍøÂç/Ö÷»ú×Ö½ÚÐò»¯º¯Êý¡¢´òÓ¡ËùÓÐ×Ö¶ÎÈÕÖ¾º¯Êý
