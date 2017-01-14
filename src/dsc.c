@@ -4753,7 +4753,7 @@ int GenerateCCode( struct CommandParameter *pcp , struct StructInfo *pstruct , F
 		}	
 		
 		fprintf( fp_dsc_h , "\n" );
-		fprintf( fp_dsc_h , "int DSCGetErrorLine_%s();\n" , next_struct->struct_name );
+		/*fprintf( fp_dsc_h , "int DSCGetErrorLine_%s();\n" , next_struct->struct_name );*/
 	}
 	
 	fprintf( fp_dsc_h , "\n" );
@@ -5257,11 +5257,11 @@ int GenerateCCode( struct CommandParameter *pcp , struct StructInfo *pstruct , F
 			fprintf( fp_dsc_LOG_c , "}\n" );
 		}
 		
-		fprintf( fp_dsc_c , "int DSCGetErrorLine_%s()\n" , next_struct->struct_name );
+		/*fprintf( fp_dsc_c , "int DSCGetErrorLine_%s()\n" , next_struct->struct_name );
 		fprintf( fp_dsc_c , "{\n" );
 		fprintf( fp_dsc_c , "	return _DSC_errline;\n" );
 		fprintf( fp_dsc_c , "}\n" );
-		fprintf( fp_dsc_c , "\n" );
+		fprintf( fp_dsc_c , "\n" );*/
 	}
 	
 	return 0;
